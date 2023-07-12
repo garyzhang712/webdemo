@@ -1,0 +1,88 @@
+nav {
+  background-color: rgba(34, 34, 124, 0.841);
+  color: white !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.divider {
+  width: 50px;
+  margin: 0 auto;
+  border-bottom: 4px solid rgba(53, 122, 241, 0.841);
+}
+
+.card {
+  background-color: #f8f9fa;
+  border-radius: 0px;
+  border: none;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.main {
+  max-width: 960px;
+}
+
+.game img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.company img {
+  height: 300px;
+}
+
+.product img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.company .card-title {
+  color: white;
+}
+
+.company .card-img-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+@media screen and (max-width: 960px) {
+  .company img {
+    height: 200px;
+  }
+
+  .game img {
+    height: 300px;
+  }
+}
+
+.card-item {
+  margin: 10px;
+
+}
+
+.toast {
+  position: fixed;
+  top: 60px;
+  right: 40px;
+}
+
+.summary {
+  height: 20vh;
+  padding: 10px;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    left: -100px;
+  }
+}
+
+.toast{
+  z-index: 10000;
+}

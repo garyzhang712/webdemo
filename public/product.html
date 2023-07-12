@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Document</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="/"><strong>Game Shop</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="/">HOME</a>
+                    <a class="nav-link" href="/games.html?company=so_game">SO GAMES</a>
+                    <a class="nav-link" href="/games.html?company=mi_game">MI GAMES</a>
+                    <a class="nav-link" href="/games.html?company=nin_game">NIN GAMES</a>
+
+                    <button class="border-0" style="background-color:transparent; color:white"
+                        data-bs-toggle="offcanvas" data-bs-target="#cart" aria-controls="cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-cart-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg>
+                    </button>
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                        </svg>
+                    </a>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu" id="dropdown" aria-labelledby="navbarDropdownMenuLink">
+
+                        </ul>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="product mt-5">
+            <input type="hidden" id="id" />
+            <h2 class="text-center" id="name">MARIO</h2>
+            <div class="divider"></div>
+            <div class="container  mt-5">
+                <div class="row">
+                    <div id="img" class="col-md-5">
+                        <img id="pix" src="images/nin_game/mario.webp" />
+                    </div>
+                    <div class="col-md-7">
+                        <h5 id="brand">ningame</h5>
+                        <hr>
+                        <div class="fs-1" id="price">C$79</div>
+                        <div class="mb-5">Shipping: <span class="text-success">Free shipping</span></div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="input-group mb-3">
+                                    <button id="dec" class="btn btn-secondary" type="button">- </button>
+                                    <input type="text" disabled min="1" id="count" value="1" class="form-control">
+                                    <button id="inc" class="btn btn-secondary" type="button">+</button>
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <button onclick="addToCart()" style="background-color: rgba(5, 101, 174, 0.841);"
+                                    class="btn text-white">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt-5">
+                <hr>
+                <div id="comment">
+                    <div class="mb-3">
+                        <label for="content" class="form-label">Write comments</label>
+                        <textarea class="form-control" id="content" rows="3"></textarea>
+                    </div>
+                    <button id="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <hr>
+                <div>
+                    <ul class="list-group list-group-flush" id="comments">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cart" aria-labelledby="cartLabel">
+        <div class="offcanvas-header py-2 px-2" style="background: rgba(5, 101, 174, 0.841); color: white;">
+            <h5 id="cartLabel"> Your Cart </h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0 bg-light h-100">
+            <div class="d-flex flex-column justify-content-between h-100">
+                <div class="items" id="items">
+                    <div class="d-flex h-100 justify-content-center align-items-center">
+                        <h5><a href="login.html">Login Please</a></h5>
+                    </div>
+                </div>
+                <div class="summary bg-white">
+                    <div class="d-flex justify-content-between">
+                        <div id="total">Total: C$0.00</div>
+                        <!-- <div id="total" class="text-primary">0</div> -->
+                    </div>
+                    <div class="mt-5 d-flex justify-content-center">
+                        <button style="background-color: rgba(5, 101, 174, 0.841);" class="btn rounded-0 text-white"
+                            id="placeorder">Place
+                            Order</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="toast align-items-center" id="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body" id="toast-message">
+                Hello, world! This is a toast message.
+            </div>
+            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="javascripts/message.js"></script>
+    <script src="javascripts/cart.js"></script>
+    <script src="javascripts/dropdown.js"></script>
+    <script>
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const product_id = urlParams.get('id');
+
+        if (!product_id) {
+            window.location.href = "/";
+        }
+
+        if (!localStorage.token) {
+            document.getElementById('comment').style.display = 'none'
+            document.getElementById('placeorder').style.display = 'none'
+        }
+
+        document.getElementById('placeorder').addEventListener('click', () => {
+            if (!localStorage.token) {
+                window.location.href = "/login.html";
+            } else {
+                if (items.length == 0) {
+                    showMessage('Please add items to cart')
+                    return;
+                }
+                fetch('/users/placeorder', {
+                    method: 'GET',
+                    headers: {
+                        'Content-type': 'application/json',
+                        'Authorization': `Bearer ${localStorage.token}`, // notice the Bearer before your token
+                    },
+                }).then(() => {
+                    getCart()
+                    showMessage('Order placed successfully!');
+                })
+
+            }
+        })
+
+        document.getElementById('submit').addEventListener('click', () => {
+            let content = document.getElementById('content').value;
+            let user = JSON.parse(localStorage.user);
+            fetch(`/products/comment`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    product_id,
+                    username: user.username,
+                    content
+                })
+            })
+                .then(() => {
+                    getProduct()
+                })
+        })
+
+        function getProduct() {
+            fetch(`/products/${product_id}`)
+                .then(resp => resp.json())
+                .then(data => {
+                    document.getElementById('id').value = data.id;
+                    document.getElementById('name').innerHTML = data.name;
+                    document.getElementById('brand').innerHTML = data.brand;
+                    document.getElementById('price').innerHTML = `C$ ${data.price}`;
+                    document.getElementById('pix').src = data.image;
+
+                    let html = data.comments.map(comment => {
+                        return `
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <small class="text-muted">${new Date(comment.created_at).toDateString().split('T')[0]}</small>
+                                    <h6 class="mb-1">${comment.username} says:</h6>
+                                </div>
+                            </div>
+                            <p class="mb-1">${comment.content}</p>
+                        </li>
+                        `
+                    }).join('')
+                    document.getElementById('comments').innerHTML = html;
+                })
+        }
+        document.getElementById('dec').addEventListener('click', () => {
+            let count = document.getElementById('count').value;
+            count = (+count) - 1;
+            count = count > 0 ? count : 1;
+            document.getElementById('count').value = count;
+        })
+
+        document.getElementById('inc').addEventListener('click', () => {
+            let count = document.getElementById('count').value;
+            count = (+count) + 1;
+            count = count;
+            document.getElementById('count').value = count;
+        })
+
+
+        getProduct()
+
+    </script>
+</body>
+
+</html>
